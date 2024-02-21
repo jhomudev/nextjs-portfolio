@@ -3,12 +3,12 @@ import Link from "next/link"
 
 function Logo() {
   return (
-    <div className="flex items-center">
+    <div className="absolute left-1/2 flex items-center">
       <Link
         href={'/'}
-        className="w-16 h-16"
+        className="relative w-9 h-9"
       >
-        <Image src={'/favicon.png'} alt="logo" width={64} height={64} />
+        <Image src={'/logo.svg'} alt="logo" fill/>
       </Link>
     </div>
   )

@@ -1,9 +1,20 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Nunito_Sans, Dosis } from 'next/font/google'
 import './globals.css'
+import ThemeProvider from '@/providers/ThemeProvider'
+import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
 
-const montserrat = Montserrat({ 
+const nunito = Nunito_Sans({ 
   subsets: ['latin'],
+  variable: '--font-nunito',
+  display: 'swap'
+})
+
+const dosis = Dosis({ 
+  subsets: ['latin'],
+  variable: '--font-dosis',
+  display: 'swap'
 })
 
 export const metadata: Metadata = {
@@ -18,7 +29,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={`${nunito.variable} ${dosis.variable}`}>
+        <ThemeProvider>
+          <div className="font-nunito text-color bg-color min-h-[100dvh]">
+            <NavBar />
+            {children}
+            <Footer />
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

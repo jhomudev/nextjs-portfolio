@@ -2,26 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.container-block {
+  @apply container mx-auto px-7;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.text-color {
+  @apply text-text-dark-normal dark:text-text-light-normal;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.text-soft-color {
+  @apply text-text-dark-soft dark:text-text-light-soft;
+}
+
+.invert-text-color {
+  @apply dark:text-text-dark-normal text-text-light-normal;
+}
+
+.invert-text-soft-color {
+  @apply dark:text-text-dark-soft text-text-light-soft;
+}
+
+.bg-color {
+  @apply bg-bg-light-normal dark:bg-bg-dark-normal;
+}
+
+.bg-soft-color {
+  @apply bg-bg-light-soft dark:bg-bg-dark-soft;
+}
+
+.invert-bg-color {
+  @apply dark:bg-bg-light-normal bg-bg-dark-normal;
+}
+
+.invert-bg-soft-color {
+  @apply dark:bg-bg-light-soft bg-bg-dark-soft;
 }
