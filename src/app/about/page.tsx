@@ -1,3 +1,4 @@
+import ExperienceTimeline from "@/components/ExperienceTimeline"
 import SkillsLists from "@/components/SkillsLists"
 import { MagicWandIcon, RocketIcon } from "@radix-ui/react-icons"
 import Image from "next/image"
@@ -5,10 +6,10 @@ import Image from "next/image"
 function AboutPage() {
   return (
     <>
-      <section className="w-full bg-soft-color py-20">
+      <section className="w-full py-20">
         <div className="container block">
           <div className="mb-20">
-            <h1 className="text-center text-3xl md:text-5xl font-bold uppercase font-dosis">La pasión alimenta al propósito!</h1>
+            <h1 className="text-center text-3xl md:text-5xl font-bold uppercase ">La pasión alimenta al propósito!</h1>
           </div>
           <div className="flex gap-10 flex-col md:flex-row">
             <div className="flex-1 flex justify-center mdjustify-end">
@@ -17,9 +18,9 @@ function AboutPage() {
               </div>
             </div>
             <div className="flex-1 flex flex-col justify-center">
-              <h2 className="text-2xl text-main_color font-semibold font-dosis uppercase mb-2">Sobre mí</h2>
+              <h2 className="title-section mb-2">Sobre mí</h2>
               <p className="text-pretty text-soft-color text-base">
-                <strong className="font-bold">Ingeniero de Software, Desarrollador Frontend en busca de oportunidades.</strong>
+                <strong className="font-bold">Ingeniero de Software, Desarrollador Frontend en busca de oportunidades.</strong>&nbsp;
                 Apasionado desarrollador con una profunda fascinación por la tecnología y la creatividad.
                 Mi viaje en el mundo digital se ha centrado en el aprendizaje y la experimentación.
                 Mi enfoque radica en ofrecer soluciones que no solo cumplan con los objetivos,
@@ -31,26 +32,26 @@ function AboutPage() {
         </div>
       </section>
       <section className="w-full py-20">
-        <div className="container-block">
-          <div className="text-center mb-2">
-            <h2 className="text-2xl text-main_color font-semibold font-dosis uppercase flex gap-2 justify-center items-center"><RocketIcon width={25} height={25} /> Skills</h2>
-            <span className="text-pretty text-soft-color text-sm font-semibold">| Conoce las tecnologías que manejo | </span>
+        <div className="container-block my-10">
+          <div className="mb-2 flex flex-col justify-center">
+            <h2 className="title-section flex gap-2 items-center justify-center"><MagicWandIcon width={25} height={25} /> Experiencia</h2>
+            <span className="text-pretty text-soft-color text-sm font-semibold text-center">He realizado y participado en diversos proyectos, los cuales me ayudaron a adquirir las habilidades que tengo.</span>
           </div>
           <br />
-          <div className="w-full">
-            <SkillsLists />
+          <div className="w-full max-w-4xl my-5 mx-auto">
+            <ExperienceTimeline />
           </div>
         </div>
       </section>
       <section className="w-full py-20">
-        <div className="container-block">
-          <div className="mb-2">
-            <h2 className="text-2xl text-main_color font-semibold font-dosis uppercase flex gap-2 items-center"><MagicWandIcon width={25} height={25} /> Experiencia</h2>
-            <span className="text-pretty text-soft-color text-sm font-semibold">| He realizado y participado en diversos proyectos, los cuales me ayudaron a adquirir las habilidades que tengo === {'>'} </span>
+        <div className="container-block mt-5">
+          <div className="text-center mb-2">
+            <h2 className="title-section flex gap-2 justify-center items-center"><RocketIcon width={25} height={25} /> Skills</h2>
+            <span className="text-pretty text-soft-color text-sm font-semibold">| Conoce las tecnologías que manejo | </span>
           </div>
           <br />
-          <div className="w-full">
-            {/* content */}
+          <div className="w-full my-5">
+            <SkillsLists />
           </div>
         </div>
       </section>

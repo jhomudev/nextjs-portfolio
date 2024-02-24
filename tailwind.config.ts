@@ -20,25 +20,25 @@ const config = {
     },
     extend: {
       fontFamily: {
-        nunito: ["var(--font-nunito)"],
-        dosis: ["var(--font-dosis)"],
+        titillium: ["var(--font-titillium)"],
       },
       colors: {
-        main_color: '#f16432',
+        main_color: '#14A297',
+        second_color: '#719EBD',
         bg: {
           light: {
             normal: '#ffffff',
             soft: '#f5f5f5',
           },
           dark: {
-            normal: '#121212',
+            normal: '#181818',
             soft: '#1b1b1b',
           },
         },
         text: {
           light: {
             normal: '#ffffff',
-            soft: '#f5f5f5',
+            soft: '#b1b1b1',
           },
           dark: {
             normal: '#000000',

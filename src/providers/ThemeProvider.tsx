@@ -8,7 +8,8 @@ type Props = {
 function ThemeProvider({children}: Props) {
   return (
     <NextThemesProvider
-      defaultTheme="light" enableSystem={false}
+      defaultTheme='system'
+      enableSystem
       themes={['light', 'dark']}
       attribute='class'
       storageKey='___jhomudev_portfolio_theme___'

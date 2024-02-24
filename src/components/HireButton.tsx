@@ -5,7 +5,7 @@ import Link from "next/link"
 
 function HireButton(props: MotionProps) {
   return (
-    <motion.div {...props} className="relative p-5 font-bold font-dosis uppercase">
+    <motion.div {...props} className="relative p-5 font-bold  uppercase">
       <motion.div
         whileHover={{ scale: 0.9}}
         className="relative z-10 invert-bg-color invert-text-color w-[110px] h-[110px] rounded-full m-9">

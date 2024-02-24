@@ -1,164 +1,170 @@
 import { MY_GITHUB_PAGES_LINK, MY_GITHUB_REPO_LINK } from ".";
 
-export const projects = [
+type Project = {
+  id: string
+  name: string
+  description: string
+  category: string
+  image: string
+  repositoryLink: string
+  url: string | null
+  techs: {
+    languages: string[]
+    frameworks: string[]
+    libraries: string[]
+    others: string[]
+  }
+}
+
+export const projects: Project[] = [
   {
     id: 'jhomublog',
     name: 'jhomublog',
+    description: 'Un blog para compartir ideas, tutoriales y consejos.',
     category: 'Desarrollo FullsTack',
     image: '/images/projects/jhomublog.png',
-    linkPage: `jhomublog.vercel.app`,
-    linkGithub: `${MY_GITHUB_REPO_LINK}/jhomublog`,
+    url: `https://jhomublog.vercel.app`,
+    repositoryLink: `${MY_GITHUB_REPO_LINK}/jhomublog`,
     techs: {
-      descrip: 'Un blog para compartir ideas, tutoriales y consejos.',
       languages: ['TypeScript', 'HTML / TSX', 'CSS'],
       frameworks: ['Next JS', 'React Js', 'Tailwind CSS'],
       libraries: ['Next UI', 'Shadcdn'],
       others: ['Mongo DB', 'Prisma ORM']
     },
-    date: new Date('2024-01-15')
   },
   {
     id: 'sysfac-nextjs',
     name: 'Sysfac NextJS',
+    description: 'Sistema de ventas e inventario realizado con NextJS.',
     category: 'Desarrollo FullsTack',
-    image: '/images/projects/jhomublog.png',
-    linkPage: `sysfac-next.vercel.app`,
-    linkGithub: `${MY_GITHUB_REPO_LINK}/sysfac-next`,
+    image: '/images/projects/sysfac_next.png',
+    url: `https://sysfac-next.vercel.app`,
+    repositoryLink: `${MY_GITHUB_REPO_LINK}/sysfac-next`,
     techs: {
-      descrip: 'Sistema de ventas e inventario realizado con NextJS.',
       languages: ['TypeScript', 'HTML / TSX', 'CSS'],
       frameworks: ['Next JS', 'React Js', 'Tailwind CSS'],
       libraries: ['Next UI', 'Chart JS'],
       others: ['MySql']
     },
-    date: new Date('2023-12-05')
   },
   {
     id: 'team-work',
     name: 'Team Work',
+    description: 'Plataforma de búsqueda de empleo.',
     category: 'Desarrollo FullsTack',
-    image: '/images/projects/jhomublog.png',
-    linkPage: `sysfac-next.vercel.app`,
-    linkGithub: `${MY_GITHUB_REPO_LINK}/team-work`,
+    image: '/images/projects/weather_app.png',
+    url: `https://sysfac-next.vercel.app`,
+    repositoryLink: `${MY_GITHUB_REPO_LINK}/team-work`,
     techs: {
-      descrip: 'Plataforma de búsqueda de empleo.',
       languages: ['Javascript', 'HTML / JSX', 'CSS'],
       frameworks: ['Next JS', 'React Js', 'Tailwind CSS'],
       libraries: ['Ant Design'],
       others: ['MySql']
     },
-    date: new Date('2023-11-02')
   },
   {
     id: 'weather-app-react-ts',
     name: 'Weather App',
+    description: 'React Js, Typescript, Tailwind CSS, Next UI.',
     category: 'Desarrollo Frontend',
-    image: '/images/projects/app-weather-ts.png',
-    linkPage: `${MY_GITHUB_PAGES_LINK}/weather-app/`,
-    linkGithub: `${MY_GITHUB_REPO_LINK}/weather-app`,
+    image: '/images/projects/weather_app.png',
+    url: `${MY_GITHUB_PAGES_LINK}/weather-app`,
+    repositoryLink: `${MY_GITHUB_REPO_LINK}/weather-app`,
     techs: {
-      descrip: 'React Js, Typescript, Tailwind CSS, Next UI.',
       languages: ['TypeScript', 'HTML / JSX', 'CSS'],
       frameworks: ['React Js', 'Tailwind CSS'],
       libraries: ['Next UI', 'Framer Motion'],
       others: ['Openweathermap Api', 'Vite Js']
     },
-    date: new Date('2023-09-29')
   },
   {
-    name: 'Sitio Web - Emisora radial',
     id: 'emisora-radial',
+    name: 'Sitio Web - Emisora radial',
+    description: 'React Js, Tailwind CSS, Next UI.',
     category: 'Desarrollo Frontend',
-    image: '/images/projects/app-radio.png',
-    linkPage: `${MY_GITHUB_PAGES_LINK}/radio-bendicion/`,
-    linkGithub: `${MY_GITHUB_REPO_LINK}/radio-bendicion`,
+    image: '/images/projects/radio_website.png',
+    url: `${MY_GITHUB_PAGES_LINK}/radio-bendicion/`,
+    repositoryLink: `${MY_GITHUB_REPO_LINK}/radio-bendicion`,
     techs: {
-      descrip: 'React Js, Tailwind CSS, Next UI.',
       languages: ['HTML / JSX', 'CSS', 'Javascript'],
       frameworks: ['React Js', 'Tailwind CSS'],
       libraries: ['Next UI'],
       others: ['Vite Js']
     },
-    date: new Date('2023-09-03')
   },
   {
     id: 'movie-finder',
     name: 'Movie Finder',
+    description: 'React Js, Tailwind CSS.',
     category: 'Desarrollo Frontend',
-    image: '/images/projects/app-movies.png',
-    linkPage: `${MY_GITHUB_PAGES_LINK}/movie-api-react/`,
-    linkGithub: `${MY_GITHUB_REPO_LINK}/movie-api-react`,
+    image: '/images/projects/movie_finder.png',
+    url: `${MY_GITHUB_PAGES_LINK}/movie-api-react/`,
+    repositoryLink: `${MY_GITHUB_REPO_LINK}/movie-api-react`,
     techs: {
-      descrip: 'React Js, Tailwind CSS.',
       languages: ['HTML / JSX', 'CSS', 'Javascript'],
       frameworks: ['React Js', 'Tailwind CSS'],
       libraries: [],
       others: ['Rapid API', 'Vite Js']
     },
-    date: '2023-08-13'
   },
   {
     id: 'ecomerce',
     name: 'Ecomerce Page',
+    description: 'React Js, Tailwind CSS, Javascript.',
     category: 'Desarrollo Frontend',
-    image: '/images/projects/app-ecommerce.png',
-    linkPage: `${MY_GITHUB_PAGES_LINK}/ecomerce-react/`,
-    linkGithub: `${MY_GITHUB_REPO_LINK}/ecomerce-react`,
+    image: '/images/projects/ecomerce.png',
+    url: `${MY_GITHUB_PAGES_LINK}/ecomerce-react/`,
+    repositoryLink: `${MY_GITHUB_REPO_LINK}/ecomerce-react`,
     techs: {
-      descrip: 'React Js, Tailwind CSS, Javascript.',
       languages: ['HTML / JSX', 'CSS', 'Javascript'],
       frameworks: ['React Js', 'Tailwind CSS'],
       libraries: [],
       others: ['Vite Js']
     },
-    date: new Date('2023-08-18')
   },
   {
     id: 'sysfac',
     name: 'Sistema de ventas e inventario',
+    description: 'PHP, MySql, Javascript, CSS, HTML.',
     category: 'Desarrollo FullStack',
-    image: '/images/projects/app-sysfac.png',
-    linkPage: null,
-    linkGithub: `${MY_GITHUB_REPO_LINK}/sysfac`,
+    image: '/images/projects/sysfac.png',
+    url: null,
+    repositoryLink: `${MY_GITHUB_REPO_LINK}/sysfac`,
     techs: {
-      descrip: 'PHP, MySql, Javascript, CSS, HTML.',
       languages: ['PHP', 'SQL', 'Javascript', 'CSS', 'HTML'],
       frameworks: [],
       libraries: ['DomPdf', 'PhpSpreadsheet'],
       others: ['MySql', 'Laragon']
     },
-    date: new Date('2023-07-10')
   },
   {
     id: 'repoo',
     name: 'Repositorio Institucional y sistema de agilización de proyectos',
+    description: 'PHP, MySql, Javascript, CSS, HTML.',
     category: 'Desarrollo FullStack',
-    image: '/images/projects/app-repoo.png',
-    linkPage: null,
-    linkGithub: `${MY_GITHUB_REPO_LINK}/repo_mvc`,
+    image: '/images/projects/repo.png',
+    url: null,
+    repositoryLink: `${MY_GITHUB_REPO_LINK}/repo_mvc`,
     techs: {
-      descrip: 'PHP, MySql, Javascript, CSS, HTML.',
       languages: ['PHP', 'SQL', 'Javascript', 'CSS', 'HTML'],
       frameworks: [],
       libraries: [],
       others: ['MySql', 'Laragon']
     },
-    date: new Date('2023-07-26')
   },
   {
     id: 'pazybien',
     name: 'Sitio web - Centro de Salud',
+    description: 'PHP, MySql, Javascript, CSS, HTML.',
     category: 'Desarrollo FullStack',
-    image: '/images/projects/app-pazybien.png',
-    linkPage: null,
-    linkGithub: 'https://github.com/peppo-su/pazybien',
+    image: '/images/projects/pazybien_website.png',
+    url: null,
+    repositoryLink: 'https://github.com/peppo-su/pazybien',
     techs: {
-      descrip: 'PHP, MySql, Javascript, CSS, HTML.',
       languages: ['PHP', 'SQL', 'Javascript', 'CSS', 'HTML'],
       frameworks: [],
       libraries: [],
       others: ['MySql', 'Laragon']
     },
-    date: new Date('2022-10-29')
   }
 ]
