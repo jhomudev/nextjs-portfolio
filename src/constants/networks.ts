@@ -1,4 +1,4 @@
-import { MY_EMAIL_LINK, MY_GITHUB_PROFILE_LINK, MY_LINKEDIN_PROFILE_LINK, MY_PHONE_NUMBER, MY_WHATSAPP_NUMBER } from ".";
+import { MY_EMAIL, MY_GITHUB_PROFILE_LINK, MY_LINKEDIN_PROFILE_LINK, MY_PHONE_NUMBER, MY_WHATSAPP_NUMBER } from ".";
 
 export const networks = [
   {
@@ -15,7 +15,7 @@ export const networks = [
   },
   {
     name: 'Email',
-    link: `mailto:${MY_EMAIL_LINK}`,
+    link: `mailto:${MY_EMAIL}`,
     image: '/images/svgs/gmail.svg',
     isMain: true
   },

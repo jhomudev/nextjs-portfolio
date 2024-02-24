@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { DropdownMenuTrigger, DropdownMenuContent, DropdownMenu, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 import Link from "next/link";
-import { MY_LINKEDIN_PROFILE_LINK } from "..";
+import { MY_EMAIL, MY_LINKEDIN_PROFILE_LINK } from "..";
 
 export default function Home() {
   return (
@@ -43,7 +43,7 @@ export default function Home() {
               </DropdownMenuContent>
             </DropdownMenu>
             <Button variant={'link'}>
-              <Link href={'mailto:jhonanmc2003@gmail.com'} target="_blank">Contátame</Link>
+              <Link href={`mailto:${MY_EMAIL}`} target="_blank">Contátame</Link>
             </Button>
           </div>
         </div>
