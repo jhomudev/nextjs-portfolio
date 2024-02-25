@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <section className="container-block w-full min-h-[calc(100dvh_-_90px)] flex flex-col md:flex-row gap-4 items-center">
       <div className="flex md:hidden lg:flex flex-1 items-center justify-center">
-        <Image src={'/images/profile/profile-1.png'} alt="jhomudev" width={300} height={300} className="w-full max-w-lg h-auto" />
+        <Image src={'/images/profile/profile-1.png'} alt="jhomudev" priority width={300} height={300} className="w-full max-w-lg h-auto" />
       </div>
       <div className="flex-1 text-center lg:text-left">
         <div className="content flex items-center lg:items-start flex-col gap-5">
@@ -43,7 +43,7 @@ export default function Home() {
               </DropdownMenuContent>
             </DropdownMenu>
             <Button variant={'link'}>
-              <Link href={`mailto:${MY_EMAIL}`} target="_blank">Contátame</Link>
+              <Link href={`mailto:${MY_EMAIL}`} target="_blank">Contáctame</Link>
             </Button>
           </div>
         </div>

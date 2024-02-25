@@ -1,11 +1,11 @@
 'use client'
-import { ThemeProvider  as NextThemesProvider} from 'next-themes'
+import { ThemeProvider as NextThemesProvider } from 'next-themes'
 
 type Props = {
   children: React.ReactNode
 }
 
-function ThemeProvider({children}: Props) {
+function ThemeProvider({ children }: Props) {
   return (
     <NextThemesProvider
       defaultTheme='system'

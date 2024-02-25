@@ -38,7 +38,7 @@ function page({ params: { slug } }: Props) {
           Volver
         </Link>
         <br />
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 max-w-2xl">
           <div className="flex flex-col gap-1">
             <h1 className="text-3xl font-bold uppercase text-main_color">{project?.name}</h1>
             <span className="text-sm text-second_color">{ project?.category }</span>
@@ -84,11 +84,15 @@ function page({ params: { slug } }: Props) {
               )
             }
           </div>
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{type: 'spring', duration: 1.5}}
+          >
             <p className="text-pretty text-soft-color text-base">
               {project?.description}
             </p>
-          </div>
+          </motion.div>
           <div>
             <ProjectTechs techs={project.techs}/>
           </div>

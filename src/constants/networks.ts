@@ -17,7 +17,7 @@ export const networks = [
     name: 'Email',
     link: `mailto:${MY_EMAIL}`,
     image: '/images/svgs/gmail.svg',
-    isMain: true
+    isMain: false
   },
   {
     name: 'Whatsapp',

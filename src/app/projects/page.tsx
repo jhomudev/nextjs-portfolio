@@ -1,6 +1,4 @@
 import ProjectsList from '@/components/ProjectsList'
-import { Button } from '@/components/ui/button'
-import React from 'react'
 
 function ProjectsPage() {
   return (

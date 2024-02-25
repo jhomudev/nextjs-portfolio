@@ -14,7 +14,7 @@ function AboutPage() {
           <div className="flex gap-10 flex-col md:flex-row">
             <div className="flex-1 flex justify-center mdjustify-end">
               <div className="relative mr-5 before:content-normal before:absolute before:-top-[2px] before:-right-[5px] before:rounded-2xl before:h-[102%] before:w-[102%] dark:before:bg-bg-light-normal before:bg-bg-dark-normal">
-                <Image src={'/images/profile/profile-2.jpg'} alt="jhomudev" width={200} height={200} className="relative z-0 rounded-xl w-full min-w-[300px] lg:min-w-[400px] max-w-md h-auto" />
+                <Image src={'/images/profile/profile-2.jpg'} alt="jhomudev" priority width={200} height={200} className="relative z-0 rounded-xl w-full min-w-[300px] lg:min-w-[400px] max-w-md h-auto" />
               </div>
             </div>
             <div className="flex-1 flex flex-col justify-center">

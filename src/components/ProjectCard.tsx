@@ -27,7 +27,7 @@ function ProjectCard({slug, image, name, category, description, repositoryLink, 
           whileHover={{scale: 1.1}}
           className="relative w-full h-full"
         >
-          <Image src={image} alt={`jhomublog - ${name}`}  width={700} height={700} className="w-full h-auto object-fit aspect-video"/>
+          <Image src={image} alt={`jhomublog - ${name}`} loading="lazy"  width={700} height={700} className="w-full h-auto object-fit aspect-video"/>
           <Link href={`/projects/${slug}`} className="absolute w-full h-full left-0 top-0" />
         </motion.div>
       </div>
